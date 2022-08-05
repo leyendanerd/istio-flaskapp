@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskci
+spec:
+  selector:
+    matchLabels:
+      app: flaskci
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: flaskci
+    spec:
+      containers:
+      - name: flaskci
+        image: julio0619/flask-ci
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
