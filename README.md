@@ -20,7 +20,7 @@ export PATH=$PWD/bin:$PATH
 
 # Install Istio
 
-### 1
+### 1 Install isitio with profile
 
 istioctl install --set profile=default -y
 
