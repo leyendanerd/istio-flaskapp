@@ -38,6 +38,9 @@ You can start with one of Istio’s built-in configuration profiles and then fur
 
 6.preview: the preview profile contains features that are experimental. This is intended to explore new features coming to Istio. Stability, security, and performance are not guaranteed - use at your own risk.
 
+![image](https://user-images.githubusercontent.com/66542754/183929719-12c6b391-bd52-469d-8972-eb50e94c13e3.png)
+
+
 ### 1 Install isitio with profile
 
 istioctl install --set profile=default -y
