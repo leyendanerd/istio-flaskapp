@@ -2,6 +2,23 @@
 
 ## Proceso de configuracion istio service + Cert-Manager en Deployment flaskci app 
 
+## Concepts Gateway, VirtualService, DestinacionRule
+
+### A Virtual Service: 
+
+Defines how requests for a service are routed within an Istio service mesh. Can use routing rules to determine the destination 
+to which a request should be sent, Can use rules to route traffic based on things like request headers, target host name, 
+url path, etc.
+
+### The Destination Rule: 
+
+Defines how traffic aimed at a particular destination gets handled.Can break a single service into multiple subsets - in other words, subcollections of pods using labels to select. The VirtualService can then route to the subset Can specify load balancing behavior 
+within the destination - random, round robin, weighted, etc. And it can specify TLS security mode, circuit breaker settings, etc.
+
+### Gateways:
+
+Gateways are used to manage inbound and outbound traffic for the mesh. The configuration settings are applied to a deployment on Envoy poxy pods running on the edge of the mesh, not as sidecars to particular workloads. A gateway can, for instance, allow incoming HTTP traffic for a specific host. You then bind a VirtualService to the Gateway, and the Gateway uses the VirtualService information to route the incoming request to the correct destination.
+
 ## Getting Started
 
 
