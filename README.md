@@ -4,6 +4,8 @@
 
 ## Concepts Gateway, VirtualService, DestinacionRule
 
+![image](Screenshot_4.png)
+
 ### A Virtual Service: 
 
 Defines how requests for a service are routed within an Istio service mesh. Can use routing rules to determine the destination 
